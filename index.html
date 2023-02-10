@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Laboratory Notebook</title>
+</head>
+<body>
+  <h1>Table of Contents</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Title</th>
+      <th>View</th>
+    </tr>
+    {{#each experiments}}
+    <tr>
+      <td>{{ this.id }}</td>
+      <td>{{ this.date }}</td>
+      <td>{{ this.title }}</td>
+      <td><a href="{{ url_for('view_entry', id=this.id) }}">View</a></td>
+    </tr>
+    {{/each}}
+  </table
+</body>
+</html>
